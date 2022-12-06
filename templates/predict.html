@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% from "base.html" import render_field %}
+
+{%block content%}
+<div class="container w-auto mt-2">
+    <form method="POST" action="" autocomplete="off">
+        {{form.hidden_tag()}}
+        <fieldset>
+            <div class="card">
+                <div class="card-header"><h3>Credit Card User's Months on Book Prediction</h3></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-xs-1 col-sm-1 col-lg-1">
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-lg-2">
+                            {{render_field(form.Customer_Age,class="form-control form-control-md")}}
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-lg-2">
+                            {{render_field(form.Gender,class="form-control form-control-md")}}
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-lg-2">
+                            {{render_field(form.Dependent_count,class="form-control form-control-md")}}
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-lg-2">
+                            {{render_field(form.Education_Level,class="form-control form-control-md")}}
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-lg-2">
+                            {{render_field(form.Marital_Status,class="form-control form-control-md")}}
+                        </div>
+                        <div class="col-xs-1 col-sm-1 col-lg-1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-1 col-sm-1 col-lg-1">
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-lg-2">
+                            {{render_field(form.Income_Category,class="form-control form-control-md")}}
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-lg-2">
+                            {{render_field(form.Card_Category,class="form-control form-control-md")}}
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-lg-2">
+                            {{render_field(form.Total_Relationship_Count,class="form-control form-control-md")}}
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-lg-2">
+                            {{render_field(form.Months_Inactive_12_mon,class="form-control form-control-md")}}
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-lg-2">
+                            {{render_field(form.Credit_Limit,class="form-control form-control-md")}}
+                        </div>
+                        <div class="col-xs-1 col-sm-1 col-lg-1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-1 col-sm-1 col-lg-1">
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-lg-2">
+                            {{render_field(form.Total_Revolving_Bal,class="form-control form-control-md")}}
+                        </div>
+                        <div class="col-xs-1 col-sm-1 col-lg-1">
+                        </div>
+                    </div>
+                    <div class="row"></div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-xs-1 col-sm-1 col-lg-1">{{form.submit(class='btn btn-primary')}}
+                        </div>
+                        <div class="col-xs-5 col-sm-5 col-lg-5">
+                                <div class="alert alert-success" role="alert">Total Months: {{pred}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+{%endblock%}
